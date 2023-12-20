@@ -1,0 +1,35 @@
+<!-- Search Section -->
+{{!-- <div class="review-container">
+    {{#if car.img_url }}
+        <img class="review-img" src="{{car.img_url}}">
+    {{else}}
+        <img class="review-img" src="https://t4.ftcdn.net/jpg/03/08/92/49/360_F_308924911_jsWAfFOqdSGglzvF7zcNcXIo06eS7Wch.jpg">
+    {{/if}}
+</div> --}}
+
+<div class="review-container">
+    <p>Post Review Here</p>
+    <form id="reviewForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="body">Body:</label>
+        <input type="text" id="body" name="body"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div class="review-container">
+    {{#each review as |review|}}
+        <div>
+            <h3>{{review.title}}</h3>
+            <h4>{{review.user.username}}</h4>
+            <p>{{review.body}}</p>
+        </div>
+    {{/each}}
+</div>
+
+<!-- Include the JavaScript file -->
+<script src="/assets/js/review.js"></script>
+
+
+

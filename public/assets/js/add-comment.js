@@ -1,0 +1,1 @@
+const addCommentBtn = document.getElementById('add-comment-btn');

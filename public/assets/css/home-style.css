@@ -1,0 +1,24 @@
+/* #searchResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1100px; /* Adjust the negative margin-top to move it further up */
+/* }
+
+.container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+    /* height: 100vh;
+    padding-top: 50px; /* Increase the top padding for additional space */
+    /* background-color: #f1e9d2;
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    /* background-size: 98%; /* Ensures the image covers the entire container */
+    /* background-position: center; /* Centers the background image */
+/* } */ 
+
+
+
+
+

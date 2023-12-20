@@ -1,0 +1,73 @@
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+
+header {
+    background-color: azure;
+    color: #fff;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2,
+h3 {
+    align-content: center;
+    text-align: center;
+    font-size: x-large;
+}
+
+header .website-title {
+    color: #f1e9d2;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #a67b5b;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Sniglet', garamond, sans-serif;
+} 
+
+.nav-bar {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Montserrat', garamond, sans-serif;
+    align-items: center;
+}
+button {
+    margin:  10px;
+}
+
+.container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+    height: 100vh;
+    padding-top: 5px; /* Increase the top padding for additional space */
+    background-color: #f1e9d2;
+    background-image: url(/public/assets/images/herbie.jpg);
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    background-size: 98%; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the background image */
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 175px;
+     border: solid;
+    border-radius: 15px;
+    padding: 12px;
+    background-color: antiquewhite;
+}
+
+/* Additional style to maintain spacing between login elements */
+#login-form .form-group {
+    margin-bottom: 20px;
+}
