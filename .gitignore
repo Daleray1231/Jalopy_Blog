@@ -3,4 +3,5 @@ node_modules
 .env
 generate-secret.js
 package-lock.json
+.env
 ```
