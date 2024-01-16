@@ -45,7 +45,7 @@ The Github repository can be found here:
 [Github Repo](https://github.com/Daleray1231/Jalopy_Blog) 
 
 The deployed application can be found here:  
-[Deployed Application]()
+[Deployed Application](https://rocky-dusk-39754-e35dc5364bcd.herokuapp.com)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
