@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Review, Car, User } = require('../../models');
 
-// GET all reviews
 router.get('/review', async (req, res) => {
   try {
     const reviewData = await Review.findAll();
@@ -18,15 +17,15 @@ router.get('/review', async (req, res) => {
   }
 });
 
-// Get all reviews for one car
 router.get('/reviews/:id', async (req, res) => {
   try {
     const reviewData = await Review.findAll({ where: { car_id: req.params.id } });
     let review;
     if (reviewData) {
       review = reviewData.map((review) =>
-      review.get({ plain: true })
-    )};
+        review.get({ plain: true })
+      )
+    };
     console.log(review);
     res.render('review', { review, loggedIn: req.session.loggedIn });
   } catch (err) {
@@ -60,20 +59,19 @@ router.get('/car/:id', async (req, res) => {
   }
 });
 
-// POST a new review
 router.post('/reviews', async (req, res) => {
   try {
-      const newReview = await Review.create({
-          title: req.body.title,
-          body: req.body.body,
-          user_id: req.session.user_id, // Assuming you store user ID in the session
-          car_id: req.body.carId,
-      });
+    const newReview = await Review.create({
+      title: req.body.title,
+      body: req.body.body,
+      user_id: req.session.user_id,
+      car_id: req.body.carId,
+    });
 
-      res.status(200).json(newReview);
+    res.status(200).json(newReview);
   } catch (error) {
-      console.error('Error creating review:', error);
-      res.status(500).json({ error: 'Failed to create review' });
+    console.error('Error creating review:', error);
+    res.status(500).json({ error: 'Failed to create review' });
   }
 });
 

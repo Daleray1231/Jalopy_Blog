@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Get request to render the review / post page when create review is clicked
 
-// Create a new review
 router.post('/create', async (req, res) => {
   try {
     if (!req.session.logged_in) {

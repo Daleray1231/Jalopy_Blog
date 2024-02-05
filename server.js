@@ -35,7 +35,6 @@ const sess = {
 };
 app.use(session(sess));
 
-// Use the routes
 app.use(require('./controllers/home-routes'));
 app.use(require('./controllers/api/post-routes'));
 app.use(require('./controllers/api/login-routes'));

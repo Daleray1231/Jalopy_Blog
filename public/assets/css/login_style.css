@@ -10,7 +10,7 @@ header {
     background-color: azure;
     color: #fff;
     padding: 10px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -29,7 +29,7 @@ header .website-title {
     font-size: 45px;
     font-weight: bold;
     font-family: 'Sniglet', garamond, sans-serif;
-} 
+}
 
 .nav-bar {
     color: #000;
@@ -38,22 +38,23 @@ header .website-title {
     font-family: 'Montserrat', garamond, sans-serif;
     align-items: center;
 }
+
 button {
-    margin:  10px;
+    margin: 10px;
 }
 
-.container { 
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+    justify-content: flex-start;
     height: 100vh;
-    padding-top: 5px; /* Increase the top padding for additional space */
+    padding-top: 5px;
     background-color: #f1e9d2;
     background-image: url(/public/assets/images/herbie.jpg);
-    background-repeat: no-repeat; /* Prevents the image from tiling */
-    background-size: 98%; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+    background-size: 98%;
+    background-position: center;
 }
 
 #login-form {
@@ -61,13 +62,12 @@ button {
     flex-direction: column;
     align-items: center;
     margin-top: 175px;
-     border: solid;
+    border: solid;
     border-radius: 15px;
     padding: 12px;
     background-color: antiquewhite;
 }
 
-/* Additional style to maintain spacing between login elements */
 #login-form .form-group {
     margin-bottom: 20px;
 }

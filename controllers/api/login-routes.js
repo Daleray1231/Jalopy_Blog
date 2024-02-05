@@ -6,7 +6,6 @@ router.get('/login', (req, res) => {
   res.render('login', { errorMessage: req.session.errorMessage });
 });
 
-// User login route
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -15,22 +14,21 @@ router.post('/login', async (req, res) => {
 
     console.log('login test', userData);
     if (!userData) {
-      return res.redirect('/'); // Redirect back to the home page 
+      return res.redirect('/');
     }
 
-    // Check the user's password with bcrypt
     const validPassword = await bcrypt.compare(req.body.password, userData.password);
 
     console.log('login test', validPassword);
     if (!validPassword) {
-      return res.redirect('/'); // Redirect back to the home page
+      return res.redirect('/');
     }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;
       req.session.logged_in = true;
-      return res.redirect('/'); // Redirect to the home page
+      return res.redirect('/');
     });
   } catch (err) {
     console.log(err);

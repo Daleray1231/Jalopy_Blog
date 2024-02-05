@@ -6,7 +6,6 @@ async function seedDatabase() {
   try {
     await sequelize.sync({ force: true });
 
-    // Seed car data
     const carData = {
       '1985': {
         'Nissan': ['240SX', '300ZX', 'Truck', 'Maxima', 'Pathfinder', 'Pulsar', 'Sentra'],

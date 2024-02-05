@@ -3,11 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="/public/assets/css/style.css">
-    {{!-- <link rel="stylesheet" href="/public/assets/css/login_style.css"> --}}
-    {{!-- <link rel="stylesheet" href="/public/assets/css/home-style.css"> --}}
 </head>
 
-<!-- Search Section -->
 <div class="home-container">
     <form id="searchForm">
         <label for="year">Year:</label>
@@ -23,24 +20,20 @@
     </form>
 </div>
 
-<!-- Display Search Results -->
 <div class="container" id="searchResults">
     {{#if cars.length}}
-        {{#each cars}}
-            <div class="car-card">
-                <div class="car-card-container">
-                    <h2><a href="/reviews/{{id}}">{{year}} {{make}} {{model}}</a></h2>
-                </div>
-            </div>
-        {{/each}}
+    {{#each cars}}
+    <div class="car-card">
+        <div class="car-card-container">
+            <h2><a href="/reviews/{{id}}">{{year}} {{make}} {{model}}</a></h2>
+        </div>
+    </div>
+    {{/each}}
     {{else}}
-        <p>No search results found.</p>
+    <p>No search results found.</p>
     {{/if}}
 </div>
 
 
 
-<!-- Include the JavaScript file -->
 <script src="/assets/js/search-results.js"></script>
-
-

@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                // Reload the page or update the reviews dynamically
                 window.location.reload();
             } else {
                 console.error('Failed to submit review');

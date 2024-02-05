@@ -2,28 +2,24 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
-    {{!-- <link rel="stylesheet" href="/public/assets/css/login_style.css"> --}}
-    <link rel="stylesheet" href="/public/assets/css/home-style.css">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+  <link rel="stylesheet" href="/public/assets/css/home-style.css">
 </head>
 
-<!-- dashboard.handlebars -->
 <h3>Car Reviews Created by You</h3>
 {{#if user}}
-  <div class="container">
-    <ul>
-      {{#each reviews}}
-        <div class="post-card">
-          <h3>{{title}}</h3>
-          <p>Review: {{body}}</p>
-          <p>Author: {{user.username}}</p>
-          <p>Car: {{car.year}} {{car.make}} {{car.model}}</p>
-        </div>
-      {{/each}}
-    </ul>
-  </div>
+<div class="container">
+  <ul>
+    {{#each reviews}}
+    <div class="post-card">
+      <h3>{{title}}</h3>
+      <p>Review: {{body}}</p>
+      <p>Author: {{user.username}}</p>
+      <p>Car: {{car.year}} {{car.make}} {{car.model}}</p>
+    </div>
+    {{/each}}
+  </ul>
+</div>
 {{else}}
-  <p>Please <a href="/login">log in</a> to view your dashboard.</p>
+<p>Please <a href="/login">log in</a> to view your dashboard.</p>
 {{/if}}
-
-

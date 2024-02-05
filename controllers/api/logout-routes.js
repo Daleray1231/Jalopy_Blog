@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const bcrypt = require('bcrypt'); // Import the bcrypt library
+const bcrypt = require('bcrypt');
 
-// GET route for logging out
 router.get('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

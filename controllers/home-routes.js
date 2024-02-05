@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User, Car, Review } = require('../models');
 
-// Render the homepage
 router.get('/', async (req, res) => {
     try {
         res.render('home');
@@ -11,7 +10,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// homepage displays the car results after the user makes a selection based on year, make, and model
 router.get('/search', async (req, res) => {
     console.log("REQ", req.query);
     try {
@@ -30,5 +28,5 @@ router.get('/search', async (req, res) => {
         res.status(500).json(err);
     }
 });
-  
+
 module.exports = router;
