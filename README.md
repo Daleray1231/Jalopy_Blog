@@ -51,4 +51,4 @@ npm run start
 
 ## Usage
 [GitHub Repository](https://github.com/Daleray1231/Jalopy_Blog)    
-[Deployed Application]()
+[Heroku Deployed Application](https://rocky-dusk-39754-e35dc5364bcd.herokuapp.com)
